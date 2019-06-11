@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import {Link} from 'react-router-dom';
 import logo from '../../imgs/logoNews.png';
+import Grid from '@material-ui/core/Grid';
 
 
 const useStyles = makeStyles(theme => ({
@@ -34,6 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
   search: {
     position: 'relative',
+    top:'10px',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
     '&:hover': {
@@ -77,7 +79,7 @@ const useStyles = makeStyles(theme => ({
     color:'#fff',
     marginRight: '10px',
     fontSize: '15px',
-    lineHeight:'30px',
+    lineHeight:'55px',
     verticalAlign:'super'
 
   },
@@ -94,8 +96,9 @@ function Nav(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <div className={classes.menuContent}>
-            <IconButton
+        <Grid container spacing={3}>
+          <Grid item xs>
+          <IconButton
               edge="start"
               className={classes.menuButton}
               color="inherit"
@@ -104,28 +107,34 @@ function Nav(props) {
               <MenuIcon />
             </IconButton>
             <img className={classes.logo} src={logo} alt="Logo" />
-            <div className={classes.menu}>
+          </Grid>
+          <Grid item xs={6}>
+          <div className={classes.menu}>
               <Link className={classes.link} to={'/'}>Inicio </Link>
               <Link className={classes.link} to={'/category/politica'}>Política </Link>
               <Link className={classes.link} to={'/category/internacionales'}>Internacionales </Link>
               <Link className={classes.link} to={'/category/tecnologia'}>Tecnología </Link>
               <Link className={classes.link} to={'/category/espectaculos'}>Espectáculos </Link>
-              <Link className={classes.link} to={'/category/deportes'}>Deportes </Link>
+              <Link className={classes.link} to={'/category/deportes'}>Deportesssss </Link>
             </div>
-          </div>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+          </Grid>
+          <Grid item xs>
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                onKeyPress={(event)=>event.key === 'Enter' ? props.history.push(`/search/${event.target.value}`):null}
+                placeholder="Buscar…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+              />
             </div>
-            <InputBase
-              onKeyPress={(event)=>event.key === 'Enter' ? props.history.push(`/search/${event.target.value}`):null}
-              placeholder="Buscar…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-            />
-          </div>
+          </Grid>
+        </Grid>
+          
         </Toolbar>
       </AppBar>
     </div>
