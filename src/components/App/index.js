@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from '../../pages/Home'
 import Category from '../../pages/Category'
 import Search from '../../pages/Search'
-import Nav from '../Nav'
+import NavBar from '../NavBar'
 
 function App() {
   return (
     <div>
       <Router>
-      <Nav />      
+      <NavBar />      
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/category/:slug" component={Category} />
