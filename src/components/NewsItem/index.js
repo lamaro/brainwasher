@@ -14,8 +14,9 @@ dayjs.locale('es')
 const useStyles = makeStyles({
   card: {
     //maxWidth: 345,
-    minHeight: '300px',
-    fontSize:'10px'
+    minHeight: '270px',
+    fontSize:'10px',
+    borderRadius: '0px'
   },
 });
 
