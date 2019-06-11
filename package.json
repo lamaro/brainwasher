@@ -10,16 +10,19 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-slick": "^0.24.0",
+    "serve": "^11.0.1",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
