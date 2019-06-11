@@ -69,6 +69,9 @@ const useStyles = makeStyles(theme => ({
   },
   bar:{
     backgroundColor:'#000'
+  },
+  link:{
+    color:'#222'
   }
 }));
 
