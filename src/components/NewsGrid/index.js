@@ -16,7 +16,8 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
   },
   button: {
-    margin: '15px auto 40px auto',
+    margin: '30px auto 40px auto',
+    display:'block'
 
   },
   input: {
@@ -53,14 +54,15 @@ const NewsGrid = ({ classes, news }) => {
         </Grid>
         {secundarias}
         {grillaRoll}
-        <Button 
+        
+      </Grid>
+      <Button 
         variant="contained" 
         onClick={()=>setrollNumer(rollNumer+4)}
         color="primary" 
         className={classes.button}>
         Cargar más
       </Button>
-      </Grid>
     </div>
   );
 }
