@@ -9,13 +9,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import {Link, withRouter} from 'react-router-dom';
 import logo from '../../imgs/logoNews.png';
-import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -67,6 +66,9 @@ const useStyles = makeStyles(theme => ({
   logo:{
     width:'220px',
     marginRight:'30px'
+  },
+  bar:{
+    backgroundColor:'#000'
   }
 }));
 
@@ -84,7 +86,7 @@ function NavBar(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.bar}>
         <Toolbar>
           <IconButton
             onClick={handleClick}
@@ -109,7 +111,7 @@ function NavBar(props) {
               <MenuItem><Link onClick={handleClose} className={classes.link} to={'/category/deportes'}>Deportes</Link></MenuItem>
             </Menu>
           <Typography className={classes.title} variant="h6" noWrap>
-            <img className={classes.logo} src={logo} alt="Logo" />
+          <Link className={classes.link} to={'/'}><img className={classes.logo} src={logo} alt="Logo" /></Link>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
