@@ -16,7 +16,7 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
   },
   button: {
-    margin: '20px auto',
+    margin: '15px auto 40px auto',
 
   },
   input: {

@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     flexGrow: 1,
   },
   textoPie:{
-    fontSize:'10px'
+    fontSize:'12px'
   },
   bar:{
     color:'#fff',
