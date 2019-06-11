@@ -4,6 +4,7 @@ import NewsGrid from '../components/NewsGrid'
 import Loading from '../components/Loading'
 import dayjs from 'dayjs'
 import 'dayjs/locale/es'
+import Footer from '../components/Footer'
 
 dayjs.locale('es')
 
@@ -40,9 +41,7 @@ class Home extends React.Component {
     return(
         <div>
             {this.state.isLoading && <Loading />}
-            <Container>
-                {!this.state.isLoading && <NewsGrid news={this.state.news} />}
-            </Container>
+            {!this.state.isLoading && <div><Container><NewsGrid news={this.state.news} /></Container><Footer /></div>}
         </div>
     )}
 }

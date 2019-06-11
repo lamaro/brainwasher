@@ -2,6 +2,7 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import NewsGrid from '../components/NewsGrid'
 import Loading from '../components/Loading'
+import Footer from '../components/Footer'
 
 class Category extends React.Component {
     constructor(props){
@@ -53,9 +54,7 @@ class Category extends React.Component {
     return(
         <div>
             {this.state.isLoading && <Loading />}
-            <Container>
-                {!this.state.isLoading && <NewsGrid news={this.state.news} />}
-            </Container>
+            {!this.state.isLoading && <div><Container><NewsGrid news={this.state.news} /></Container><Footer /></div>}
         </div>
     )}
 }
