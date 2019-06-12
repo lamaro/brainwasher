@@ -76,7 +76,7 @@ import Grid from '@material-ui/core/Grid';
               <Typography component="h1" variant="h3" color="inherit" gutterBottom>
                 {title}
               </Typography>
-              <a className={classes.link} variant="subtitle1" href={url} target="_blank">
+              <a className={classes.link} variant="subtitle1" href={url} target="_blank" rel="noopener noreferrer">
                 Ver nota
               </a>
             </div>

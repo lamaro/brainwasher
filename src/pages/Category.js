@@ -54,7 +54,7 @@ class Category extends React.Component {
     return(
         <div>
             {this.state.isLoading && <Loading />}
-            {!this.state.isLoading && <div><Container><NewsGrid news={this.state.news} /></Container><Footer /></div>}
+            {!this.state.isLoading && <div><Container><NewsGrid news={this.state.news} referido={this.props.match.params.slug} /></Container><Footer /></div>}
         </div>
     )}
 }

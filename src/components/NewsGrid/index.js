@@ -14,6 +14,7 @@ const styles = theme => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    height:'10px'
   },
   button: {
     margin: '30px auto 40px auto',
@@ -23,11 +24,17 @@ const styles = theme => ({
   input: {
     display: 'none',
   },
+  loadEnd:{
+    margin: '30px auto 40px auto',
+    display:'block',
+    fontFamily:'Roboto',
+    textAlign:'center'
+  },
 });
 
-const NewsGrid = ({ classes, news }) => {
+const NewsGrid = ({ classes, news, referido }) => {
   const [rollNumer,setrollNumer] = useState(13)
-  const [rollNumerMax,setrollNumerMax] = useState(news.length)
+  const [rollNumerMax] = useState(news.length - 9)
   const destacadas = news.slice(0, 3).map(newsItem => {
     return newsItem
   })
@@ -57,7 +64,7 @@ const NewsGrid = ({ classes, news }) => {
         {grillaRoll}
         
       </Grid>
-      {rollNumer < rollNumerMax &&
+      {rollNumer < rollNumerMax ?
       <Button 
         variant="contained" 
         onClick={()=>setrollNumer(rollNumer+4)}
@@ -65,6 +72,8 @@ const NewsGrid = ({ classes, news }) => {
         className={classes.button}>
         Cargar más
       </Button>
+      :
+      <p className={classes.loadEnd}>Se cargaron todas las noticias de {referido}</p>
       }
     </div>
     

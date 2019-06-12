@@ -27,7 +27,7 @@ function ImgMediaCard({data, height}) {
 
   return (
     <Card className={classes.card}>
-      <Link href={url} target="_blank">
+      <Link href={url} target="_blank" rel="noopener noreferrer">
         <CardActionArea> 
             <CardMedia
               component="img"
