@@ -27,6 +27,7 @@ const styles = theme => ({
 
 const NewsGrid = ({ classes, news }) => {
   const [rollNumer,setrollNumer] = useState(13)
+  const [rollNumerMax,setrollNumerMax] = useState(news.length)
   const destacadas = news.slice(0, 3).map(newsItem => {
     return newsItem
   })
@@ -56,6 +57,7 @@ const NewsGrid = ({ classes, news }) => {
         {grillaRoll}
         
       </Grid>
+      {rollNumer < rollNumerMax &&
       <Button 
         variant="contained" 
         onClick={()=>setrollNumer(rollNumer+4)}
@@ -63,7 +65,9 @@ const NewsGrid = ({ classes, news }) => {
         className={classes.button}>
         Cargar más
       </Button>
+      }
     </div>
+    
   );
 }
 

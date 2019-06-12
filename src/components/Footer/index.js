@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     fontSize:'12px'
   },
   bar:{
+    marginTop:'20px',
     color:'#fff',
     backgroundColor:'#222'
   }
