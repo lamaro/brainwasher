@@ -26,7 +26,7 @@ const useStyles = makeStyles({
       <AppBar className={classes.bar} position="static" color="default">
         <Toolbar>
           <Typography className={classes.textoPie} color="inherit">
-            Uninspirng: No todo es lo que parece....
+            The Brainwasher: No todo es lo que parece....
           </Typography>
         </Toolbar>
       </AppBar>

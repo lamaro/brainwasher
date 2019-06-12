@@ -122,7 +122,7 @@ function NavBar(props) {
             </div>
             <InputBase
                 onKeyPress={(event)=>event.key === 'Enter' ? props.history.push(`/search/${event.target.value}`):null}
-              placeholder="Search…"
+              placeholder="Buscar…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
