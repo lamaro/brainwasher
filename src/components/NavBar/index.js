@@ -107,6 +107,7 @@ function NavBar(props) {
             open={Boolean(anchorEl)}
             onClose={handleClose}
             >
+              <MenuItem><Link onClick={handleClose} className={classes.link} to={'/'}>Inicio </Link></MenuItem>
               <MenuItem><Link onClick={handleClose} className={classes.link} to={'/category/politica'}>Política </Link></MenuItem>
               <MenuItem><Link onClick={handleClose} className={classes.link} to={'/category/internacionales'}>Internacionales </Link></MenuItem>
               <MenuItem><Link onClick={handleClose} className={classes.link} to={'/category/tecnologia'}>Tecnología </Link></MenuItem>

@@ -109,7 +109,7 @@ function Nav(props) {
             <img className={classes.logo} src={logo} alt="Logo" />
           </Grid>
           <Grid item xs={6}>
-          <div className={classes.menu}>
+            <div className={classes.menu}>
               <Link className={classes.link} to={'/'}>Inicio </Link>
               <Link className={classes.link} to={'/category/politica'}>Política </Link>
               <Link className={classes.link} to={'/category/internacionales'}>Internacionales </Link>
